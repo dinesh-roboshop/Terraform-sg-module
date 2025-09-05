@@ -1,6 +1,6 @@
-resource "aws_security_group" "" {
-  name        = "allow_tls"
-  description = "Allow TLS inbound traffic and all outbound traffic"
+resource "aws_security_group" "allow_tls" {
+  name        = var.sg_name
+  description = var.sg_description
   vpc_id      = data.aws_ssm_parameter.vpc_id
   tags = merge (
     var.common_tags,
@@ -10,6 +10,4 @@ resource "aws_security_group" "" {
     }
 
   )
-  
-
 }
