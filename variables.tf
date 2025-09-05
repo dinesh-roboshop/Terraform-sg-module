@@ -5,10 +5,14 @@ variable "environment" {
   type        = string
 }
 
+variable "vpc_id" {
+  type        = string
+}
+
 variable "resource_tags" {
   type        = map 
   default = {
-    resource = "security Group"
+    resource = "securityGroup"
   }
 }
 
@@ -25,5 +29,5 @@ variable "sg_name" {
 
 variable "sg_description" {
   type        = string
-
+  default = ""
 }
