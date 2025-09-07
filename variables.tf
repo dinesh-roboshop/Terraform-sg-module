@@ -12,7 +12,7 @@ variable "vpc_id" {
 variable "resource_tags" {
   type        = map 
   default = {
-    resource = "securityGroup"
+    resource = "securitygroup"
   }
 }
 
