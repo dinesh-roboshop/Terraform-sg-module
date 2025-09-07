@@ -6,7 +6,7 @@ resource "aws_security_group" "allow_tls" {
     var.common_tags,
     var.resource_tags,
     {
-      Name = "${local.name}-${var.sg_name}"
+      Name = "${local.name}-sg"
     }
 
   )
